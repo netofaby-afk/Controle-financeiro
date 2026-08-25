@@ -7,9 +7,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#f5f1eb">
 <title>Controle Financeiro</title>
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="manifest" href="manifest.webmanifest">
 <meta name="application-name" content="Controle Financeiro">
 <meta name="apple-mobile-web-app-title" content="Controle Financeiro">
 
@@ -141,6 +138,7 @@ body.dark .sheet{background:#1f1f1f}
 .cloud-login.hidden{display:none}
 .cloud-card{width:100%;max-width:390px;background:#fff;border-radius:28px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
 .cloud-logo{width:74px;height:74px;border-radius:22px;margin:0 auto 12px;display:block}
+.cloud-logo-text{width:74px;height:74px;border-radius:22px;margin:0 auto 12px;display:grid;place-items:center;background:linear-gradient(135deg,#7a5a3c,#c99a6b);color:#fff;font-size:27px;font-weight:950;box-shadow:0 12px 26px rgba(80,55,35,.22)}
 .cloud-title{text-align:center;font-size:25px;font-weight:900;margin:0}
 .cloud-sub{text-align:center;color:#7e756d;font-size:13px;line-height:1.45;margin:7px 0 18px}
 .cloud-error{color:#b54a4a;font-size:12px;font-weight:750;min-height:18px;margin-top:8px;text-align:center}
@@ -170,7 +168,7 @@ body.dark .sheet{background:#1f1f1f}
 
 <div id="cloudLogin" class="cloud-login">
   <div class="cloud-card">
-    <img class="cloud-logo" src="apple-touch-icon.png" alt="Controle Financeiro">
+    <div class="cloud-logo-text">CF</div>
     <h2 class="cloud-title">Controle Financeiro</h2>
     <div class="cloud-sub">Entre com o e-mail e a senha cadastrados no Firebase para acessar os dados compartilhados.</div>
     <div class="field"><label>E-mail</label><input id="loginEmail" type="email" autocomplete="username" placeholder="seuemail@exemplo.com"></div>
