@@ -178,12 +178,12 @@ body.dark .sheet{background:#1f1f1f}
     <div class="field"><label>Senha</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Sua senha"></div>
     <button class="primary" onclick="signInFirebase()">Entrar</button>
     <div id="cloudLoginError" class="cloud-error"></div>
-    <div class="cloud-note">Os dois celulares devem entrar com um dos usuÃ¡rios criados no mesmo projeto Firebase.</div>
+    <div class="cloud-note">Os dois celulares devem entrar com um dos usuários criados no mesmo projeto Firebase.</div>
   </div>
 </div>
-<div id="cloudStatus" class="cloud-status">Sincronizandoâ¦</div>
+<div id="cloudStatus" class="cloud-status">Sincronizando…</div>
 <div id="accountMenu" class="account-menu" style="display:none">
-  <button onclick="showAccountActions()">â Conta</button>
+  <button onclick="showAccountActions()">☁ Conta</button>
 </div>
 
 <div class="app">
@@ -191,58 +191,58 @@ body.dark .sheet{background:#1f1f1f}
 <header><div><div class="eyebrow" id="greeting">Boa noite</div><h1>Controle Financeiro</h1></div><div class="avatar">F</div></header>
 
 <div class="month-base">
-  <label for="homeMonthFilter">MÃªs-base</label>
+  <label for="homeMonthFilter">Mês-base</label>
   <select id="homeMonthFilter" onchange="changeBaseMonth(this.value)"></select>
 </div>
 
 <div class="hero" onclick="openReport()">
-  <div class="eyebrow">Saldo previsto do mÃªs</div>
+  <div class="eyebrow">Saldo previsto do mês</div>
   <div id="kBalance" class="hero-balance">R$ 0,00</div>
   <div class="hero-row">
     <div class="hero-mini">Receitas<strong id="heroIncome">R$ 0,00</strong></div>
     <div class="hero-mini">Despesas<strong id="heroExpense">R$ 0,00</strong></div>
-    <div class="hero-mini">MÃªs atual<strong id="heroMonth">â</strong></div>
+    <div class="hero-mini">Mês atual<strong id="heroMonth">—</strong></div>
   </div>
 </div>
 
 <div class="grid">
-  <div class="card kpi-card kpi-pending" onclick="openFiltered('pending')"><div class="kpi-icon">â³</div><h3>A pagar no mÃªs</h3><div id="kPending" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-paid" onclick="openFiltered('paidExpense')"><div class="kpi-icon">â</div><h3>Pago no mÃªs</h3><div id="kPaid" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-overdue" onclick="openFiltered('previousOverdue')"><div class="kpi-icon">â ï¸</div><h3>Vencidas anteriores</h3><div id="kPreviousOverdue" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-general" onclick="openFiltered('generalPending')"><div class="kpi-icon">ð§¾</div><h3>Total pendente geral</h3><div id="kGeneralPending" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-income" onclick="openFiltered('income')"><div class="kpi-icon">â</div><h3>Receitas do mÃªs</h3><div id="kIncome" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-reserve" onclick="showScreen('reserve')"><div class="kpi-icon">ð¡ï¸</div><h3>Reserva atual</h3><div id="kReserve" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-month" onclick="openFiltered('expense')"><div class="kpi-icon">ð</div><h3>Total de despesas</h3><div id="kExpense" class="value sm">R$ 0,00</div></div>
-  <div class="card kpi-card kpi-remaining" onclick="openFiltered('upcomingAll')"><div class="kpi-icon">ð</div><h3>A vencer â visÃ£o geral</h3><div id="kUpcomingAll" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-pending" onclick="openFiltered('pending')"><div class="kpi-icon">⏳</div><h3>A pagar no mês</h3><div id="kPending" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-paid" onclick="openFiltered('paidExpense')"><div class="kpi-icon">✅</div><h3>Pago no mês</h3><div id="kPaid" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-overdue" onclick="openFiltered('previousOverdue')"><div class="kpi-icon">⚠️</div><h3>Vencidas anteriores</h3><div id="kPreviousOverdue" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-general" onclick="openFiltered('generalPending')"><div class="kpi-icon">🧾</div><h3>Total pendente geral</h3><div id="kGeneralPending" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-income" onclick="openFiltered('income')"><div class="kpi-icon">↗</div><h3>Receitas do mês</h3><div id="kIncome" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-reserve" onclick="showScreen('reserve')"><div class="kpi-icon">🛡️</div><h3>Reserva atual</h3><div id="kReserve" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-month" onclick="openFiltered('expense')"><div class="kpi-icon">📊</div><h3>Total de despesas</h3><div id="kExpense" class="value sm">R$ 0,00</div></div>
+  <div class="card kpi-card kpi-remaining" onclick="openFiltered('upcomingAll')"><div class="kpi-icon">📆</div><h3>A vencer — visão geral</h3><div id="kUpcomingAll" class="value sm">R$ 0,00</div></div>
 </div>
 
 <div class="quick-actions">
-  <button class="quick-action" onclick="openTransaction()"><span>ï¼</span>Adicionar</button>
-  <button class="quick-action" onclick="showScreen('transactions');dateQuickFilter.value='today';renderTransactions()"><span>ð</span>Hoje</button>
-  <button class="quick-action" onclick="showScreen('transactions');statusFilter.value='late';renderTransactions()"><span>â ï¸</span>Vencidas</button>
-  <button class="quick-action" onclick="showScreen('reports')"><span>ð</span>RelatÃ³rios</button>
+  <button class="quick-action" onclick="openTransaction()"><span>＋</span>Adicionar</button>
+  <button class="quick-action" onclick="showScreen('transactions');dateQuickFilter.value='today';renderTransactions()"><span>📅</span>Hoje</button>
+  <button class="quick-action" onclick="showScreen('transactions');statusFilter.value='late';renderTransactions()"><span>⚠️</span>Vencidas</button>
+  <button class="quick-action" onclick="showScreen('reports')"><span>📈</span>Relatórios</button>
 </div>
 
 <div id="financialHealth"></div>
 <div id="attentionSummary" class="card attention-card" style="margin-top:14px"></div>
-<div class="section-head"><h2>Contas que exigem atenÃ§Ã£o</h2><button class="text-btn" onclick="showScreen('transactions')">Ver todos</button></div>
+<div class="section-head"><h2>Contas que exigem atenção</h2><button class="text-btn" onclick="showScreen('transactions')">Ver todos</button></div>
 <div id="homeList" class="list"></div>
-<div class="section-head"><h2>OrÃ§amentos do mÃªs</h2><button class="text-btn" onclick="openBudget()">Configurar</button></div>
+<div class="section-head"><h2>Orçamentos do mês</h2><button class="text-btn" onclick="openBudget()">Configurar</button></div>
 <div id="homeBudgets"></div>
 </section>
 
 <section id="transactions" class="screen">
-<header><div><div class="eyebrow">Entradas e saÃ­das</div><h1>MovimentaÃ§Ãµes</h1></div><span id="txCount" class="badge">0 itens</span></header>
+<header><div><div class="eyebrow">Entradas e saídas</div><h1>Movimentações</h1></div><span id="txCount" class="badge">0 itens</span></header>
 <div class="filters">
 <input id="search" class="full" placeholder="Pesquisar..." oninput="renderTransactions()">
 <select id="monthFilter" onchange="changeBaseMonth(this.value)"></select>
 <select id="statusFilter" onchange="renderTransactions()">
 <option value="all">Todos os status</option>
-<option value="pending">Pendentes do mÃªs</option>
-<option value="generalPending">Pendente geral â mÃªs + atrasadas</option>
+<option value="pending">Pendentes do mês</option>
+<option value="generalPending">Pendente geral — mês + atrasadas</option>
 <option value="previousOverdue" hidden>Vencidas de meses anteriores</option>
-<option value="upcomingAll">A vencer â todos os meses</option>
-<option value="late">Vencidas â todos os meses</option>
+<option value="upcomingAll">A vencer — todos os meses</option>
+<option value="late">Vencidas — todos os meses</option>
 <option value="paid">Pagos/recebidos</option>
 </select>
 <select id="typeFilter" onchange="renderTransactions()">
@@ -262,16 +262,16 @@ body.dark .sheet{background:#1f1f1f}
 <select id="dateQuickFilter" onchange="toggleCustomDate();renderTransactions()">
 <option value="all">Todas as datas</option>
 <option value="today">Vencem hoje</option>
-<option value="7">PrÃ³ximos 7 dias</option>
-<option value="15">PrÃ³ximos 15 dias</option>
-<option value="30">PrÃ³ximos 30 dias</option>
+<option value="7">Próximos 7 dias</option>
+<option value="15">Próximos 15 dias</option>
+<option value="30">Próximos 30 dias</option>
 
 
 
 
 
 <option value="dayCustom">Dia personalizado</option>
-<option value="custom">PerÃ­odo personalizado</option>
+<option value="custom">Período personalizado</option>
 </select>
 <div class="due-filter-box">
   <div class="due-filter-title"><div><div class="eyebrow">Dias de vencimento</div><strong>Selecione um ou mais dias</strong></div><button type="button" class="text-btn" onclick="clearDueDays()">Desmarcar</button></div>
@@ -292,14 +292,14 @@ body.dark .sheet{background:#1f1f1f}
 <div id="customDateWrap" class="full" style="display:none">
 <div class="two">
 <div><label class="eyebrow">De</label><input id="dateFrom" type="date" onchange="renderTransactions()"></div>
-<div><label class="eyebrow">AtÃ©</label><input id="dateTo" type="date" onchange="renderTransactions()"></div>
+<div><label class="eyebrow">Até</label><input id="dateTo" type="date" onchange="renderTransactions()"></div>
 </div>
 </div>
 </div>
 <div id="closedMonthBanner"></div>
 <div id="filterSummary" class="card summary-card"></div>
-<div class="section-head"><h2>LanÃ§amentos</h2><div><button class="text-btn" onclick="resetFilters();renderTransactions()">Limpar filtros</button><button class="text-btn danger-btn" onclick="clearTransactions()">Apagar todos</button></div></div>
-<div class="note" style="margin:-4px 2px 12px">Ao tocar na lixeira de uma compra parcelada, todas as parcelas daquele lanÃ§amento serÃ£o apagadas juntas.</div>
+<div class="section-head"><h2>Lançamentos</h2><div><button class="text-btn" onclick="resetFilters();renderTransactions()">Limpar filtros</button><button class="text-btn danger-btn" onclick="clearTransactions()">Apagar todos</button></div></div>
+<div class="note" style="margin:-4px 2px 12px">Ao tocar na lixeira de uma compra parcelada, todas as parcelas daquele lançamento serão apagadas juntas.</div>
 <div id="txList" class="list"></div>
 </section>
 
@@ -307,41 +307,41 @@ body.dark .sheet{background:#1f1f1f}
 <header><div><div class="eyebrow">Reserva e objetivos</div><h1>Reserva</h1></div></header>
 <div class="card"><h3>Saldo acumulado</h3><div id="reserveTotal" class="value">R$ 0,00</div><div class="progress" style="margin-top:14px"><span id="reserveBar" style="width:0"></span></div><div class="note" style="margin-top:8px">Meta atual: <strong id="reserveGoalText">R$ 20.000,00</strong></div></div>
 <div class="two no-print"><button class="primary" onclick="openReserve()">Movimentar</button><button class="secondary" style="margin-top:18px" onclick="editReserveGoal()">Alterar meta</button></div>
-<div class="section-head"><h2>HistÃ³rico</h2><button class="text-btn danger-btn" onclick="clearReserve()">Apagar tudo</button></div>
+<div class="section-head"><h2>Histórico</h2><button class="text-btn danger-btn" onclick="clearReserve()">Apagar tudo</button></div>
 <div id="reserveList" class="list"></div>
 </section>
 
 <section id="reports" class="screen">
-<header><div><div class="eyebrow">AnÃ¡lise financeira</div><h1>RelatÃ³rios</h1></div></header>
+<header><div><div class="eyebrow">Análise financeira</div><h1>Relatórios</h1></div></header>
 <div class="card">
 <div class="kpi-line"><span>Receitas</span><strong id="rIncome">R$ 0,00</strong></div>
 <div class="kpi-line"><span>Despesas</span><strong id="rExpense">R$ 0,00</strong></div>
 <div class="kpi-line"><span>Pago</span><strong id="rPaid">R$ 0,00</strong></div>
 <div class="kpi-line"><span>Pendente</span><strong id="rPending">R$ 0,00</strong></div>
-<div class="kpi-line"><span>Saldo do mÃªs</span><strong id="rBalance">R$ 0,00</strong></div>
+<div class="kpi-line"><span>Saldo do mês</span><strong id="rBalance">R$ 0,00</strong></div>
 </div>
 <div class="section-head"><h2>Gastos por categoria</h2></div>
 <div id="categoryChart" class="card"></div>
-<div class="section-head"><h2>ComparaÃ§Ã£o mensal</h2></div>
+<div class="section-head"><h2>Comparação mensal</h2></div>
 <div id="monthCompare" class="card"></div>
-<div class="section-head"><h2>Resumo por responsÃ¡vel</h2></div>
+<div class="section-head"><h2>Resumo por responsável</h2></div>
 <div id="responsibleSummary" class="card"></div>
 <div class="report-actions no-print"><button onclick="exportCSV()">Exportar CSV</button><button onclick="window.print()">Salvar em PDF</button></div>
 <div class="section-head no-print"><h2>Fechamento mensal</h2></div>
 <div id="closeMonthCard" class="card no-print"></div>
 <div class="section-head no-print"><h2>Alertas de vencimento</h2></div>
 <div class="notification-card no-print">
-  <div style="font-size:17px;font-weight:900">NotificaÃ§Ãµes no celular</div>
-  <div class="note" style="margin-top:6px">Ative para receber os avisos de contas prÃ³ximas e vencidas. No iPhone, abra o app pelo Ã­cone da Tela de InÃ­cio.</div>
-  <button id="enableNotificationsBtn" class="notification-button" onclick="enableNotifications()">Ativar notificaÃ§Ãµes</button>
-  <div id="notificationState" class="notification-state">Inicializando notificaÃ§Ãµesâ¦</div>
+  <div style="font-size:17px;font-weight:900">Notificações no celular</div>
+  <div class="note" style="margin-top:6px">Ative para receber os avisos de contas próximas e vencidas. No iPhone, abra o app pelo ícone da Tela de Início.</div>
+  <button id="enableNotificationsBtn" class="notification-button" onclick="enableNotifications()">Ativar notificações</button>
+  <div id="notificationState" class="notification-state">Inicializando notificações…</div>
 </div>
-<div class="section-head no-print"><h2>Nuvem e seguranÃ§a</h2></div>
+<div class="section-head no-print"><h2>Nuvem e segurança</h2></div>
 <div class="card no-print" style="margin-bottom:14px">
-  <div style="font-weight:900">SincronizaÃ§Ã£o Firebase ativada</div>
-  <div class="note" style="margin-top:6px">Contas, pagamentos, reserva, categorias e configuraÃ§Ãµes sÃ£o compartilhados. Os comprovantes ainda ficam somente no celular atÃ© ativarmos o Firebase Storage.</div>
+  <div style="font-weight:900">Sincronização Firebase ativada</div>
+  <div class="note" style="margin-top:6px">Contas, pagamentos, reserva, categorias e configurações são compartilhados. Os comprovantes ainda ficam somente no celular até ativarmos o Firebase Storage.</div>
 </div>
-<div class="section-head no-print"><h2>SeguranÃ§a e backup</h2></div>
+<div class="section-head no-print"><h2>Segurança e backup</h2></div>
 <div class="card no-print">
   <div class="settings-grid">
     <button onclick="exportBackup()">Fazer backup</button>
@@ -352,14 +352,14 @@ body.dark .sheet{background:#1f1f1f}
   <input id="restoreFile" type="file" accept=".json,application/json" style="display:none" onchange="restoreBackup(event)">
   <div id="storageWarning" class="storage-warning"></div>
 </div>
-<p class="note no-print">No iPhone, âSalvar em PDFâ abre a impressÃ£o. Depois, amplie a prÃ©via com dois dedos e use Compartilhar para salvar o PDF.</p>
-<div class="section-head no-print"><h2>ConfiguraÃ§Ãµes</h2></div>
+<p class="note no-print">No iPhone, “Salvar em PDF” abre a impressão. Depois, amplie a prévia com dois dedos e use Compartilhar para salvar o PDF.</p>
+<div class="section-head no-print"><h2>Configurações</h2></div>
 <div class="card no-print">
-  <div class="field"><label>ResponsÃ¡veis</label><input id="settingsPeople" placeholder="Ex.: Fabiana, JoÃ£o"></div>
+  <div class="field"><label>Responsáveis</label><input id="settingsPeople" placeholder="Ex.: Fabiana, João"></div>
   <div class="field"><label>Categorias favoritas</label><input id="settingsCategories" placeholder="Ex.: Luz, Internet, Filha"></div>
   <div class="field"><label>Meta mensal de economia</label><input id="settingsSavingsGoal" inputmode="decimal" placeholder="0,00"></div>
   <div class="field"><label>Tema</label><select id="settingsTheme"><option value="light">Claro</option><option value="dark">Escuro</option></select></div>
-  <button class="primary" onclick="saveSettings()">Salvar configuraÃ§Ãµes</button>
+  <button class="primary" onclick="saveSettings()">Salvar configurações</button>
   <div id="settingsPreview" class="chip-list"></div>
 </div>
 </section>
@@ -367,21 +367,21 @@ body.dark .sheet{background:#1f1f1f}
 
 <button class="fab" onclick="openTransaction()">+</button>
 <nav class="nav">
-<button class="active" data-screen="home" onclick="showScreen('home')">â<br>InÃ­cio</button>
-<button data-screen="transactions" onclick="showScreen('transactions')">â¤<br>Contas</button>
+<button class="active" data-screen="home" onclick="showScreen('home')">⌂<br>Início</button>
+<button data-screen="transactions" onclick="showScreen('transactions')">▤<br>Contas</button>
 <div></div>
-<button data-screen="reserve" onclick="showScreen('reserve')">â<br>Reserva</button>
-<button data-screen="reports" onclick="showScreen('reports')">â¥<br>RelatÃ³rios</button>
+<button data-screen="reserve" onclick="showScreen('reserve')">◉<br>Reserva</button>
+<button data-screen="reports" onclick="showScreen('reports')">▥<br>Relatórios</button>
 </nav>
 
 <div id="txOverlay" class="overlay"><div class="sheet">
-<h2 id="txModalTitle">Novo lanÃ§amento</h2>
+<h2 id="txModalTitle">Novo lançamento</h2>
 <input type="hidden" id="editId">
 <div class="two">
 <div class="field"><label>Tipo</label><select id="tType"><option value="expense">Despesa</option><option value="income">Receita</option></select></div>
 <div class="field"><label>Status</label><select id="tPaid"><option value="false">Pendente</option><option value="true">Pago/recebido</option></select></div>
 </div>
-<div class="field"><label>DescriÃ§Ã£o</label><input id="tTitle" placeholder="Ex.: Conta de luz"></div>
+<div class="field"><label>Descrição</label><input id="tTitle" placeholder="Ex.: Conta de luz"></div>
 <div class="two">
 <div class="field"><label>Valor</label><input id="tValue" inputmode="decimal" placeholder="0,00"></div>
 <div class="field"><label>Data</label><input id="tDate" type="date"></div>
@@ -395,20 +395,20 @@ body.dark .sheet{background:#1f1f1f}
 <button type="button" onclick="addCustomCategory()">Adicionar</button>
 </div>
 </div>
-<div class="field"><label>ResponsÃ¡vel</label><input id="tPerson" placeholder="Ex.: Fabiana"></div>
+<div class="field"><label>Responsável</label><input id="tPerson" placeholder="Ex.: Fabiana"></div>
 </div>
 <div class="two">
-<div class="field"><label>RepetiÃ§Ã£o</label><select id="tRepeat"><option value="none">NÃ£o repetir</option><option value="monthly">Mensal</option></select></div>
+<div class="field"><label>Repetição</label><select id="tRepeat"><option value="none">Não repetir</option><option value="monthly">Mensal</option></select></div>
 <div class="field"><label>Parcelas</label><input id="tInstallments" type="number" min="1" max="60" value="1"></div>
 </div>
-<div class="field"><label>ObservaÃ§Ã£o</label><input id="tNote" placeholder="Opcional"></div>
+<div class="field"><label>Observação</label><input id="tNote" placeholder="Opcional"></div>
 <div class="field">
 <label>Comprovante</label>
 <div class="attachment-box">
   <input id="tReceipt" type="file" accept="image/*" onchange="handleReceipt(event)">
   <div class="note">Escolha uma foto da galeria, tire uma nova foto ou selecione um arquivo.</div>
   <div id="receiptPreview" class="attachment-preview">
-    <img id="receiptImg" alt="PrÃ©via do comprovante">
+    <img id="receiptImg" alt="Prévia do comprovante">
     <div class="attachment-actions">
       <button type="button" class="attach-view" onclick="openCurrentReceipt()">Visualizar</button>
       <button type="button" class="attach-remove" onclick="removeCurrentReceipt()">Remover</button>
@@ -423,15 +423,15 @@ body.dark .sheet{background:#1f1f1f}
 <h2>Movimentar reserva</h2>
 <div class="field"><label>Tipo</label><select id="rvType"><option value="in">Guardar</option><option value="out">Retirar</option></select></div>
 <div class="field"><label>Valor</label><input id="rvValue" inputmode="decimal" placeholder="0,00"></div>
-<div class="field"><label>DescriÃ§Ã£o</label><input id="rvDesc" placeholder="Ex.: Reserva do mÃªs"></div>
+<div class="field"><label>Descrição</label><input id="rvDesc" placeholder="Ex.: Reserva do mês"></div>
 <button class="primary" onclick="saveReserve()">Salvar</button><button class="secondary" onclick="closeReserve()">Cancelar</button>
 </div></div>
 
 <div id="budgetOverlay" class="overlay"><div class="sheet">
-<h2>OrÃ§amento por categoria</h2>
+<h2>Orçamento por categoria</h2>
 <div class="field"><label>Categoria</label><select id="bCategory"></select></div>
 <div class="field"><label>Limite mensal</label><input id="bValue" inputmode="decimal" placeholder="0,00"></div>
-<button class="primary" onclick="saveBudget()">Salvar orÃ§amento</button><button class="secondary" onclick="closeBudget()">Cancelar</button>
+<button class="primary" onclick="saveBudget()">Salvar orçamento</button><button class="secondary" onclick="closeBudget()">Cancelar</button>
 </div></div>
 
 <script>
@@ -464,13 +464,13 @@ async function initializeOneSignal(){
   }
 
   oneSignalInitStarted = true;
-  setNotificationMessage('Inicializando notificaÃ§Ãµesâ¦');
+  setNotificationMessage('Inicializando notificações…');
 
   oneSignalInitPromise = (async () => {
     try{
       const workerResponse = await fetch('./OneSignalSDKWorker.js', {cache:'no-store'});
       if(!workerResponse.ok){
-        throw new Error('O arquivo de notificaÃ§Ãµes nÃ£o foi encontrado no site.');
+        throw new Error('O arquivo de notificações não foi encontrado no site.');
       }
 
       window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -504,7 +504,7 @@ async function initializeOneSignal(){
             resolve(true);
           }catch(err){
             console.error('Erro ao iniciar OneSignal:', err);
-            oneSignalInitError = err && err.message ? err.message : 'Erro desconhecido ao iniciar as notificaÃ§Ãµes.';
+            oneSignalInitError = err && err.message ? err.message : 'Erro desconhecido ao iniciar as notificações.';
             setNotificationMessage('Falha ao iniciar: ' + oneSignalInitError);
             resolve(false);
           }
@@ -523,12 +523,12 @@ async function initializeOneSignal(){
 
 async function enableNotifications(){
   if(!isStandaloneApp()){
-    setNotificationMessage('No iPhone, abra este aplicativo pelo Ã­cone da Tela de InÃ­cio.');
+    setNotificationMessage('No iPhone, abra este aplicativo pelo ícone da Tela de Início.');
     return;
   }
 
   if(!oneSignalReady || !oneSignalInstance){
-    setNotificationMessage('Carregando notificaÃ§Ãµesâ¦');
+    setNotificationMessage('Carregando notificações…');
     const ready = await initializeOneSignal();
     if(!ready)return;
   }
@@ -539,7 +539,7 @@ async function enableNotifications(){
     const supported = OneSignal.Notifications.isPushSupported();
 
     if(!supported){
-      setNotificationMessage('Este aparelho ou navegador nÃ£o oferece suporte a notificaÃ§Ãµes web.');
+      setNotificationMessage('Este aparelho ou navegador não oferece suporte a notificações web.');
       return;
     }
 
@@ -554,7 +554,7 @@ async function enableNotifications(){
     await updateNotificationState();
   }catch(err){
     console.error(err);
-    setNotificationMessage('NÃ£o foi possÃ­vel ativar: ' + (err.message || 'erro desconhecido.'));
+    setNotificationMessage('Não foi possível ativar: ' + (err.message || 'erro desconhecido.'));
   }finally{
     enableNotificationsBtn.disabled = false;
   }
@@ -562,7 +562,7 @@ async function enableNotifications(){
 
 async function updateNotificationState(){
   if(!oneSignalReady || !oneSignalInstance){
-    setNotificationMessage('Inicializando notificaÃ§Ãµesâ¦');
+    setNotificationMessage('Inicializando notificações…');
     return;
   }
 
@@ -570,7 +570,7 @@ async function updateNotificationState(){
     const supported = OneSignal.Notifications.isPushSupported();
 
     if(!supported){
-      setNotificationMessage('Este aparelho nÃ£o oferece suporte a notificaÃ§Ãµes web.');
+      setNotificationMessage('Este aparelho não oferece suporte a notificações web.');
       enableNotificationsBtn.disabled = true;
       return;
     }
@@ -579,25 +579,25 @@ async function updateNotificationState(){
     const optedIn = OneSignal.User.PushSubscription.optedIn;
 
     if(permission && optedIn){
-      setNotificationMessage('â NotificaÃ§Ãµes ativadas neste aparelho.');
-      enableNotificationsBtn.textContent = 'NotificaÃ§Ãµes ativadas';
+      setNotificationMessage('✅ Notificações ativadas neste aparelho.');
+      enableNotificationsBtn.textContent = 'Notificações ativadas';
       enableNotificationsBtn.disabled = true;
     }else if(permission && !optedIn){
-      setNotificationMessage('A permissÃ£o jÃ¡ existe. Toque para concluir a inscriÃ§Ã£o.');
-      enableNotificationsBtn.textContent = 'Concluir ativaÃ§Ã£o';
+      setNotificationMessage('A permissão já existe. Toque para concluir a inscrição.');
+      enableNotificationsBtn.textContent = 'Concluir ativação';
       enableNotificationsBtn.disabled = false;
     }else{
       setNotificationMessage(
         isStandaloneApp()
-          ? 'Toque no botÃ£o para permitir as notificaÃ§Ãµes.'
-          : 'No iPhone, abra o app pelo Ã­cone da Tela de InÃ­cio.'
+          ? 'Toque no botão para permitir as notificações.'
+          : 'No iPhone, abra o app pelo ícone da Tela de Início.'
       );
-      enableNotificationsBtn.textContent = 'Ativar notificaÃ§Ãµes';
+      enableNotificationsBtn.textContent = 'Ativar notificações';
       enableNotificationsBtn.disabled = false;
     }
   }catch(err){
     console.error(err);
-    setNotificationMessage('Erro ao verificar notificaÃ§Ãµes: ' + (err.message || 'erro desconhecido.'));
+    setNotificationMessage('Erro ao verificar notificações: ' + (err.message || 'erro desconhecido.'));
   }
 }
 
@@ -625,9 +625,9 @@ let cloudSaveTimer = null;
 
 const DB='controle_financeiro_v1';
 const MONTH_KEY='controle_financeiro_mes_base';
-const baseCategories=['Ãgua','Luz','Internet','Moradia','AlimentaÃ§Ã£o','Filha','Curso','Mesada','Passeios','FamÃ­lia','SaÃºde','Transporte','Lazer','Outros','SalÃ¡rio','Renda extra'];
+const baseCategories=['Água','Luz','Internet','Moradia','Alimentação','Filha','Curso','Mesada','Passeios','Família','Saúde','Transporte','Lazer','Outros','Salário','Renda extra'];
 function getCategories(){return [...new Set([...baseCategories,...(data.customCategories||[])])].sort((a,b)=>a.localeCompare(b,'pt-BR'))}
-const icons={'Ãgua':'ð§','Luz':'ð¡','Internet':'ð¶','Moradia':'ð ','AlimentaÃ§Ã£o':'ð','Filha':'ð§','Curso':'ð','Mesada':'ð°','Passeios':'ð¡','FamÃ­lia':'ð¨âð©âð§','SaÃºde':'ð©º','Transporte':'ð','Lazer':'ð¬','SalÃ¡rio':'ð¼','Renda extra':'â','Outros':'ð§¾'};
+const icons={'Água':'💧','Luz':'💡','Internet':'📶','Moradia':'🏠','Alimentação':'🛒','Filha':'👧','Curso':'📚','Mesada':'💰','Passeios':'🎡','Família':'👨‍👩‍👧','Saúde':'🩺','Transporte':'🚗','Lazer':'🎬','Salário':'💼','Renda extra':'➕','Outros':'🧾'};
 let data=JSON.parse(localStorage.getItem(DB)||'null')||{transactions:[],reserve:[],budgets:{},reserveGoal:20000,closedMonths:{}};
 const selectedDueDays=new Set();
 if(!data.closedMonths)data.closedMonths={};
@@ -652,7 +652,7 @@ function cloudSafeData(source){
  const copy=JSON.parse(JSON.stringify(source));
  copy.transactions=(copy.transactions||[]).map(t=>{
    const c={...t};
-   // Comprovantes continuam locais atÃ© o Storage ser ativado.
+   // Comprovantes continuam locais até o Storage ser ativado.
    delete c.receipt;
    delete c.paymentReceipt;
    return c;
@@ -672,7 +672,7 @@ function mergeLocalReceipts(remote){
  remote.transactions=(remote.transactions||[]).map(t=>({...t,...(receiptMap[t.id]||{})}));
  return remote;
 }
-function showCloudStatus(text='Sincronizandoâ¦'){
+function showCloudStatus(text='Sincronizando…'){
  cloudStatus.textContent=text;
  cloudStatus.classList.add('show');
 }
@@ -684,18 +684,18 @@ function scheduleCloudSave(){
 async function saveCloudData(){
  if(!firebaseUser)return;
  try{
-   showCloudStatus('Salvando na nuvemâ¦');
+   showCloudStatus('Salvando na nuvem…');
    await familyDoc.set(cloudSafeData(data),{merge:false});
    hideCloudStatus();
  }catch(err){
    hideCloudStatus();
-   alert('NÃ£o foi possÃ­vel sincronizar. Verifique as regras do Firestore e sua conexÃ£o.');
+   alert('Não foi possível sincronizar. Verifique as regras do Firestore e sua conexão.');
    console.error(err);
  }
 }
 async function startCloudSync(){
  if(cloudUnsubscribe)cloudUnsubscribe();
- showCloudStatus('Carregando dadosâ¦');
+ showCloudStatus('Carregando dados…');
  const first=await familyDoc.get();
  if(!first.exists){
    await familyDoc.set(cloudSafeData(data));
@@ -729,14 +729,14 @@ async function startCloudSync(){
    setTimeout(hideCloudStatus,1000);
  },err=>{
    console.error(err);
-   showCloudStatus('Erro de sincronizaÃ§Ã£o');
+   showCloudStatus('Erro de sincronização');
  });
  hideCloudStatus();
 }
 function isMonthClosed(month){return !!data.closedMonths[month]}
 function ensureMonthOpen(date){
  const month=ym(date);
- if(isMonthClosed(month)){alert('Este mÃªs estÃ¡ fechado. Reabra o mÃªs em RelatÃ³rios para fazer alteraÃ§Ãµes.');return false}
+ if(isMonthClosed(month)){alert('Este mês está fechado. Reabra o mês em Relatórios para fazer alterações.');return false}
  return true;
 }
 function currentMonth(){return homeMonthFilter.value||monthFilter.value||localStorage.getItem(MONTH_KEY)||new Date().toISOString().slice(0,7)}
@@ -763,13 +763,13 @@ function generateRecurring(){
 function refreshCategoryOptions(){
  const cats=getCategories();
  tCategory.innerHTML=cats.map(c=>`<option>${c}</option>`).join('');
- bCategory.innerHTML=cats.filter(c=>!['SalÃ¡rio','Renda extra'].includes(c)).map(c=>`<option>${c}</option>`).join('');
+ bCategory.innerHTML=cats.filter(c=>!['Salário','Renda extra'].includes(c)).map(c=>`<option>${c}</option>`).join('');
  categoryFilter.innerHTML='<option value="all">Todas as categorias</option>'+cats.map(c=>`<option value="${c}">${c}</option>`).join('');
 }
 function addCustomCategory(){
  const name=(newCategoryName.value||'').trim();
  if(!name){alert('Digite o nome da categoria.');return}
- if(getCategories().some(c=>c.toLowerCase()===name.toLowerCase())){alert('Essa categoria jÃ¡ existe.');return}
+ if(getCategories().some(c=>c.toLowerCase()===name.toLowerCase())){alert('Essa categoria já existe.');return}
  data.customCategories.push(name);
  persist();
  refreshCategoryOptions();
@@ -784,16 +784,16 @@ async function signInFirebase(){
  cloudLoginError.textContent='';
  if(!email||!password){cloudLoginError.textContent='Preencha e-mail e senha.';return}
  try{
-   showCloudStatus('Entrandoâ¦');
+   showCloudStatus('Entrando…');
    await firebaseAuth.signInWithEmailAndPassword(email,password);
  }catch(err){
    hideCloudStatus();
    const messages={
      'auth/invalid-credential':'E-mail ou senha incorretos.',
-     'auth/invalid-email':'O e-mail informado nÃ£o Ã© vÃ¡lido.',
+     'auth/invalid-email':'O e-mail informado não é válido.',
      'auth/too-many-requests':'Muitas tentativas. Aguarde um pouco.'
    };
-   cloudLoginError.textContent=messages[err.code]||'NÃ£o foi possÃ­vel entrar.';
+   cloudLoginError.textContent=messages[err.code]||'Não foi possível entrar.';
  }
 }
 async function signOutFirebase(){
@@ -901,26 +901,26 @@ function renderHome(){
  const attention=[...overdue,...todayList,...next7].slice(0,6);
  const overdueValue=overdue.reduce((a,b)=>a+b.value,0),todayValue=todayList.reduce((a,b)=>a+b.value,0),next7Value=next7.reduce((a,b)=>a+b.value,0);
  attentionSummary.innerHTML=`<div style="font-weight:900;font-size:16px;margin-bottom:6px">Resumo de vencimentos</div>
- ${previousOverdueItems.length?`<div style="padding:10px 12px;margin-bottom:8px;border-radius:13px;background:#f7e9e9;color:var(--danger);font-weight:850;cursor:pointer" onclick="openFiltered('previousOverdue')">â ï¸ ${previousOverdueItems.length} conta(s) vencida(s) de meses anteriores â ${money(previousOverdue)}</div>`:''}
- <div class="kpi-line" onclick="openFiltered('late')" style="cursor:pointer"><span>ð´ Vencidas</span><strong style="color:var(--danger)">${overdue.length} â¢ ${money(overdueValue)}</strong></div>
- <div class="kpi-line" onclick="openFiltered('today')" style="cursor:pointer"><span>ð  Vencem hoje</span><strong style="color:var(--warn)">${todayList.length} â¢ ${money(todayValue)}</strong></div>
- <div class="kpi-line" onclick="openFiltered('7')" style="cursor:pointer"><span>ðµ PrÃ³ximos 7 dias</span><strong style="color:var(--blue)">${next7.length} â¢ ${money(next7Value)}</strong></div>`;
- homeList.innerHTML=attention.map(t=>itemHTML(t,false)).join('')||'<div class="empty">Nenhuma conta vencida ou prÃ³xima.</div>';
+ ${previousOverdueItems.length?`<div style="padding:10px 12px;margin-bottom:8px;border-radius:13px;background:#f7e9e9;color:var(--danger);font-weight:850;cursor:pointer" onclick="openFiltered('previousOverdue')">⚠️ ${previousOverdueItems.length} conta(s) vencida(s) de meses anteriores — ${money(previousOverdue)}</div>`:''}
+ <div class="kpi-line" onclick="openFiltered('late')" style="cursor:pointer"><span>🔴 Vencidas</span><strong style="color:var(--danger)">${overdue.length} • ${money(overdueValue)}</strong></div>
+ <div class="kpi-line" onclick="openFiltered('today')" style="cursor:pointer"><span>🟠 Vencem hoje</span><strong style="color:var(--warn)">${todayList.length} • ${money(todayValue)}</strong></div>
+ <div class="kpi-line" onclick="openFiltered('7')" style="cursor:pointer"><span>🔵 Próximos 7 dias</span><strong style="color:var(--blue)">${next7.length} • ${money(next7Value)}</strong></div>`;
+ homeList.innerHTML=attention.map(t=>itemHTML(t,false)).join('')||'<div class="empty">Nenhuma conta vencida ou próxima.</div>';
  renderFinancialHealth(inc,exp,pending);
  renderBudgets();
 }
 
 function renderFinancialHealth(income,expense,pending){
- let cls='health-ok',title='Dentro do orÃ§amento',text='As despesas estÃ£o sob controle.';
- if(income<=0&&expense>0){cls='health-warn';title='AtenÃ§Ã£o';text='Cadastre suas receitas para acompanhar o saldo real.'}
- else if(expense>income){cls='health-bad';title='Acima do orÃ§amento';text='As despesas ultrapassaram as receitas do mÃªs.'}
- else if(expense>income*0.8){cls='health-warn';title='AtenÃ§Ã£o';text='Mais de 80% das receitas jÃ¡ estÃ£o comprometidas.'}
- financialHealth.innerHTML=`<div class="health-card ${cls}"><div style="font-size:13px;opacity:.85">SaÃºde financeira</div><div style="font-size:20px;font-weight:900;margin-top:4px">${title}</div><div style="font-size:12px;margin-top:6px">${text}</div></div>`;
+ let cls='health-ok',title='Dentro do orçamento',text='As despesas estão sob controle.';
+ if(income<=0&&expense>0){cls='health-warn';title='Atenção';text='Cadastre suas receitas para acompanhar o saldo real.'}
+ else if(expense>income){cls='health-bad';title='Acima do orçamento';text='As despesas ultrapassaram as receitas do mês.'}
+ else if(expense>income*0.8){cls='health-warn';title='Atenção';text='Mais de 80% das receitas já estão comprometidas.'}
+ financialHealth.innerHTML=`<div class="health-card ${cls}"><div style="font-size:13px;opacity:.85">Saúde financeira</div><div style="font-size:20px;font-weight:900;margin-top:4px">${title}</div><div style="font-size:12px;margin-top:6px">${text}</div></div>`;
 }
 
 function renderBudgets(){
  const month=filteredMonth(),cats=Object.keys(data.budgets);
- homeBudgets.innerHTML=cats.length?cats.map(c=>{let spent=month.filter(t=>t.type==='expense'&&t.category===c).reduce((a,b)=>a+b.value,0),limit=data.budgets[c],pct=Math.min(100,limit?spent/limit*100:0);return `<div class="card budget"><div class="budget-top"><strong>${c}</strong><span>${money(spent)} de ${money(limit)}</span></div><div class="progress"><span style="width:${pct}%"></span></div></div>`}).join(''):'<div class="empty">Nenhum orÃ§amento definido.</div>';
+ homeBudgets.innerHTML=cats.length?cats.map(c=>{let spent=month.filter(t=>t.type==='expense'&&t.category===c).reduce((a,b)=>a+b.value,0),limit=data.budgets[c],pct=Math.min(100,limit?spent/limit*100:0);return `<div class="card budget"><div class="budget-top"><strong>${c}</strong><span>${money(spent)} de ${money(limit)}</span></div><div class="progress"><span style="width:${pct}%"></span></div></div>`}).join(''):'<div class="empty">Nenhum orçamento definido.</div>';
 }
 function renderTransactions(){
  let q=(search.value||'').toLowerCase(),st=statusFilter.value,df=dateQuickFilter.value,tp=typeFilter.value,cf=categoryFilter.value,bf=(bankFilter.value||'').toLowerCase(),rf=receiptFilter.value;
@@ -960,22 +960,22 @@ function renderTransactions(){
  const totalExpense=list.filter(t=>t.type==='expense').reduce((a,b)=>a+b.value,0);
  const totalIncome=list.filter(t=>t.type==='income').reduce((a,b)=>a+b.value,0);
  let summaryTitle='Total do filtro';
- if(st==='late')summaryTitle='Total das contas vencidas â todos os meses';
+ if(st==='late')summaryTitle='Total das contas vencidas — todos os meses';
  else if(st==='previousOverdue')summaryTitle='Vencidas de meses anteriores';
- else if(st==='generalPending')summaryTitle='Total pendente geral â mÃªs + atrasadas';
- else if(st==='upcomingAll')summaryTitle='A vencer â visÃ£o geral de todos os meses';
+ else if(st==='generalPending')summaryTitle='Total pendente geral — mês + atrasadas';
+ else if(st==='upcomingAll')summaryTitle='A vencer — visão geral de todos os meses';
  else if(df==='today')summaryTitle='Total que vence hoje';
- else if(df==='7')summaryTitle='Total dos prÃ³ximos 7 dias';
- else if(df==='15')summaryTitle='Total dos prÃ³ximos 15 dias';
- else if(df==='30')summaryTitle='Total dos prÃ³ximos 30 dias';
+ else if(df==='7')summaryTitle='Total dos próximos 7 dias';
+ else if(df==='15')summaryTitle='Total dos próximos 15 dias';
+ else if(df==='30')summaryTitle='Total dos próximos 30 dias';
  else if(selectedDueDays.size)summaryTitle=`Total dos vencimentos nos dias ${[...selectedDueDays].sort((a,b)=>a-b).map(d=>String(d).padStart(2,'0')).join(' e ')}`;
  filterSummary.innerHTML=`<div style="font-size:13px;color:var(--muted);font-weight:850">${summaryTitle}</div>
  <div class="value sm" style="margin-top:6px">${money(totalExpense)}</div>
- <div class="item-meta">${list.length} lanÃ§amento(s)${totalIncome?` â¢ Receitas: ${money(totalIncome)}`:''}${globalStatuses.includes(st)?' â¢ Inclui todos os meses':''}</div>`;
+ <div class="item-meta">${list.length} lançamento(s)${totalIncome?` • Receitas: ${money(totalIncome)}`:''}${globalStatuses.includes(st)?' • Inclui todos os meses':''}</div>`;
  const closed=isMonthClosed(currentMonth());
- closedMonthBanner.innerHTML=closed?`<div class="closed-banner">ð Este mÃªs estÃ¡ fechado. Reabra em RelatÃ³rios para fazer alteraÃ§Ãµes.</div>`:'';
+ closedMonthBanner.innerHTML=closed?`<div class="closed-banner">🔒 Este mês está fechado. Reabra em Relatórios para fazer alterações.</div>`:'';
  txCount.textContent=list.length+' itens';
- txList.innerHTML=list.map(t=>itemHTML(t,true)).join('')||'<div class="empty">Nenhum lanÃ§amento neste filtro.</div>';
+ txList.innerHTML=list.map(t=>itemHTML(t,true)).join('')||'<div class="empty">Nenhum lançamento neste filtro.</div>';
 }
 
 function toggleDueDay(day){
@@ -1001,14 +1001,14 @@ function toggleCustomDate(){
 function itemHTML(t,actions){
  let d=daysUntil(t.date),status=t.paid?(t.type==='income'?'Recebido':'Pago'):t.type==='income'?'A receber':d<0?'Atrasado':d===0?'Vence hoje':d<=7?`Vence em ${d} dias`:new Date(t.date+'T12:00:00').toLocaleDateString('pt-BR');
  let cls=t.paid?'ok':(t.type==='expense'&&d<0)?'late':d<=7?'soon':'';
- return `<div class="item"><div class="ico">${icons[t.category]||'ð§¾'}</div><div class="item-main" onclick="handleTransactionClick(${t.id})"><div class="item-title">${t.title}</div><div class="item-meta">${t.category}${t.person?' â¢ '+t.person:''}${t.paid&&t.paymentBank?' â¢ Pago via '+t.paymentBank:''}</div></div><div><div class="amount">${t.type==='income'?'+':'-'} ${money(t.value)}</div><div class="status ${cls}">${status}</div></div>${actions?`<div class="row-actions">${(t.paymentReceipt||t.receipt)?`<button class="receipt-btn" onclick="openReceipt(${t.id})">ð§¾</button>`:''}<button class="icon-btn" onclick="editTransaction(${t.id})">â</button><button class="icon-btn danger" onclick="deleteFullTransaction(${t.id})">ð</button></div>`:''}</div>`;
+ return `<div class="item"><div class="ico">${icons[t.category]||'🧾'}</div><div class="item-main" onclick="handleTransactionClick(${t.id})"><div class="item-title">${t.title}</div><div class="item-meta">${t.category}${t.person?' • '+t.person:''}${t.paid&&t.paymentBank?' • Pago via '+t.paymentBank:''}</div></div><div><div class="amount">${t.type==='income'?'+':'-'} ${money(t.value)}</div><div class="status ${cls}">${status}</div></div>${actions?`<div class="row-actions">${(t.paymentReceipt||t.receipt)?`<button class="receipt-btn" onclick="openReceipt(${t.id})">🧾</button>`:''}<button class="icon-btn" onclick="editTransaction(${t.id})">✎</button><button class="icon-btn danger" onclick="deleteFullTransaction(${t.id})">🗑</button></div>`:''}</div>`;
 }
-function openTransaction(){editId.value='';currentReceipt='';updateReceiptPreview();txModalTitle.textContent='Novo lanÃ§amento';tTitle.value='';tValue.value='';tDate.value=new Date().toISOString().slice(0,10);tType.value='expense';tPaid.value='false';tCategory.value='Ãgua';tPerson.value='';tRepeat.value='none';tInstallments.value=1;tNote.value='';txOverlay.classList.add('show')}
+function openTransaction(){editId.value='';currentReceipt='';updateReceiptPreview();txModalTitle.textContent='Novo lançamento';tTitle.value='';tValue.value='';tDate.value=new Date().toISOString().slice(0,10);tType.value='expense';tPaid.value='false';tCategory.value='Água';tPerson.value='';tRepeat.value='none';tInstallments.value=1;tNote.value='';txOverlay.classList.add('show')}
 function closeTransaction(){txOverlay.classList.remove('show')}
-function editTransaction(id){const t=data.transactions.find(x=>x.id===id);if(!t)return;editId.value=id;txModalTitle.textContent='Editar lanÃ§amento';tTitle.value=t.title;tValue.value=String(t.value).replace('.',',');tDate.value=t.date;tType.value=t.type;tPaid.value=String(t.paid);tCategory.value=t.category;tPerson.value=t.person||'';tRepeat.value=t.repeat||'none';tInstallments.value=1;tNote.value=t.note||'';currentReceipt=t.receipt||'';updateReceiptPreview();txOverlay.classList.add('show')}
+function editTransaction(id){const t=data.transactions.find(x=>x.id===id);if(!t)return;editId.value=id;txModalTitle.textContent='Editar lançamento';tTitle.value=t.title;tValue.value=String(t.value).replace('.',',');tDate.value=t.date;tType.value=t.type;tPaid.value=String(t.paid);tCategory.value=t.category;tPerson.value=t.person||'';tRepeat.value=t.repeat||'none';tInstallments.value=1;tNote.value=t.note||'';currentReceipt=t.receipt||'';updateReceiptPreview();txOverlay.classList.add('show')}
 function saveTransaction(){
  if(!ensureMonthOpen(tDate.value))return;
- const value=parseMoney(tValue.value);if(!tTitle.value||!value||!tDate.value){alert('Preencha descriÃ§Ã£o, valor e data.');return}
+ const value=parseMoney(tValue.value);if(!tTitle.value||!value||!tDate.value){alert('Preencha descrição, valor e data.');return}
  const id=Number(editId.value);
  if(id){const i=data.transactions.findIndex(x=>x.id===id);data.transactions[i]={...data.transactions[i],title:tTitle.value,value,date:tDate.value,type:tType.value,paid:tPaid.value==='true',category:tCategory.value,person:tPerson.value,repeat:tRepeat.value,note:tNote.value,receipt:currentReceipt}}
  else{
@@ -1041,23 +1041,23 @@ function deleteFullTransaction(id){
  const gid=t.groupId||t.id;
  const related=data.transactions.filter(x=>(x.groupId||x.id)===gid);
  const msg=related.length>1
-   ? `Apagar o lanÃ§amento completo com todas as ${related.length} parcelas?`
-   : 'Apagar este lanÃ§amento completo?';
+   ? `Apagar o lançamento completo com todas as ${related.length} parcelas?`
+   : 'Apagar este lançamento completo?';
  if(confirm(msg)){
    data.transactions=data.transactions.filter(x=>(x.groupId||x.id)!==gid);
    persist();renderAll();
  }
 }
-function clearTransactions(){if(isMonthClosed(currentMonth())){alert('Este mÃªs estÃ¡ fechado.');return}if(confirm('Apagar todos os lanÃ§amentos?')){data.transactions=[];persist();renderAll()}}
+function clearTransactions(){if(isMonthClosed(currentMonth())){alert('Este mês está fechado.');return}if(confirm('Apagar todos os lançamentos?')){data.transactions=[];persist();renderAll()}}
 function renderReserve(){
  const total=data.reserve.reduce((a,r)=>a+(r.type==='in'?r.value:-r.value),0);reserveTotal.textContent=money(total);reserveGoalText.textContent=money(data.reserveGoal);reserveBar.style.width=Math.min(100,total/data.reserveGoal*100)+'%';
- reserveList.innerHTML=[...data.reserve].reverse().map(r=>`<div class="item"><div class="ico">${r.type==='in'?'â':'â'}</div><div class="item-main"><div class="item-title">${r.desc}</div><div class="item-meta">${new Date(r.date).toLocaleDateString('pt-BR')}</div></div><div class="amount">${r.type==='in'?'+':'-'} ${money(r.value)}</div><button class="icon-btn danger" onclick="deleteReserve(${r.id})">ð</button></div>`).join('')||'<div class="empty">Nenhuma movimentaÃ§Ã£o.</div>';
+ reserveList.innerHTML=[...data.reserve].reverse().map(r=>`<div class="item"><div class="ico">${r.type==='in'?'↗':'↘'}</div><div class="item-main"><div class="item-title">${r.desc}</div><div class="item-meta">${new Date(r.date).toLocaleDateString('pt-BR')}</div></div><div class="amount">${r.type==='in'?'+':'-'} ${money(r.value)}</div><button class="icon-btn danger" onclick="deleteReserve(${r.id})">🗑</button></div>`).join('')||'<div class="empty">Nenhuma movimentação.</div>';
 }
 function openReserve(){rvValue.value='';rvDesc.value='';rvType.value='in';reserveOverlay.classList.add('show')}
 function closeReserve(){reserveOverlay.classList.remove('show')}
-function saveReserve(){const value=parseMoney(rvValue.value);if(!value){alert('Informe o valor.');return}data.reserve.push({id:Date.now(),type:rvType.value,value,desc:rvDesc.value||'MovimentaÃ§Ã£o da reserva',date:new Date().toISOString()});persist();closeReserve();renderAll()}
-function deleteReserve(id){if(confirm('Apagar esta movimentaÃ§Ã£o?')){data.reserve=data.reserve.filter(x=>x.id!==id);persist();renderAll()}}
-function clearReserve(){if(confirm('Apagar todo o histÃ³rico da reserva?')){data.reserve=[];persist();renderAll()}}
+function saveReserve(){const value=parseMoney(rvValue.value);if(!value){alert('Informe o valor.');return}data.reserve.push({id:Date.now(),type:rvType.value,value,desc:rvDesc.value||'Movimentação da reserva',date:new Date().toISOString()});persist();closeReserve();renderAll()}
+function deleteReserve(id){if(confirm('Apagar esta movimentação?')){data.reserve=data.reserve.filter(x=>x.id!==id);persist();renderAll()}}
+function clearReserve(){if(confirm('Apagar todo o histórico da reserva?')){data.reserve=[];persist();renderAll()}}
 function editReserveGoal(){const v=prompt('Nova meta da reserva:',data.reserveGoal);const n=parseMoney(v);if(n){data.reserveGoal=n;persist();renderAll()}}
 function openBudget(){bValue.value='';budgetOverlay.classList.add('show')}
 function closeBudget(){budgetOverlay.classList.remove('show')}
@@ -1066,12 +1066,12 @@ function renderReports(){
  const tx=filteredMonth(),inc=tx.filter(t=>t.type==='income').reduce((a,b)=>a+b.value,0),exp=tx.filter(t=>t.type==='expense').reduce((a,b)=>a+b.value,0),paid=tx.filter(t=>t.paid&&t.type==='expense').reduce((a,b)=>a+b.value,0),pending=tx.filter(t=>!t.paid&&t.type==='expense').reduce((a,b)=>a+b.value,0);
  rIncome.textContent=money(inc);rExpense.textContent=money(exp);rPaid.textContent=money(paid);rPending.textContent=money(pending);rBalance.textContent=money(inc-exp);
  const cats={};tx.filter(t=>t.type==='expense').forEach(t=>cats[t.category]=(cats[t.category]||0)+t.value);const max=Math.max(1,...Object.values(cats));
- categoryChart.innerHTML=Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([c,v])=>`<div class="chart-row"><strong>${c}</strong><div class="bar"><span style="width:${v/max*100}%"></span></div><span>${money(v)}</span></div>`).join('')||'<div class="empty">Sem despesas no mÃªs.</div>';
+ categoryChart.innerHTML=Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([c,v])=>`<div class="chart-row"><strong>${c}</strong><div class="bar"><span style="width:${v/max*100}%"></span></div><span>${money(v)}</span></div>`).join('')||'<div class="empty">Sem despesas no mês.</div>';
  const months=[];for(let i=5;i>=0;i--){let d=new Date();d.setMonth(d.getMonth()-i);let m=d.toISOString().slice(0,7),v=data.transactions.filter(t=>ym(t.date)===m&&t.type==='expense').reduce((a,b)=>a+b.value,0);months.push([d.toLocaleDateString('pt-BR',{month:'short'}),v])}const mm=Math.max(1,...months.map(x=>x[1]));
  monthCompare.innerHTML=months.map(([m,v])=>`<div class="chart-row"><strong>${m}</strong><div class="bar"><span style="width:${v/mm*100}%"></span></div><span>${money(v)}</span></div>`).join('');
  const people={};
- tx.filter(t=>t.type==='expense').forEach(t=>{const p=t.person||'NÃ£o informado';people[p]=(people[p]||0)+t.value});
- responsibleSummary.innerHTML=Object.entries(people).sort((a,b)=>b[1]-a[1]).map(([p,v])=>`<div class="responsible-row"><strong>${p}</strong><span>${money(v)}</span></div>`).join('')||'<div class="empty">Sem responsÃ¡veis informados.</div>';
+ tx.filter(t=>t.type==='expense').forEach(t=>{const p=t.person||'Não informado';people[p]=(people[p]||0)+t.value});
+ responsibleSummary.innerHTML=Object.entries(people).sort((a,b)=>b[1]-a[1]).map(([p,v])=>`<div class="responsible-row"><strong>${p}</strong><span>${money(v)}</span></div>`).join('')||'<div class="empty">Sem responsáveis informados.</div>';
 }
 
 
@@ -1083,7 +1083,7 @@ function openPayment(id){
  paymentDate.value=new Date().toISOString().slice(0,10);
  paymentBank.value=t.paymentBank||'';
  currentPaymentReceipt=t.paymentReceipt||t.receipt||'';
- paymentAccountSummary.innerHTML=`<div style="font-weight:900">${t.title}</div><div class="item-meta">${t.category} â¢ Vencimento ${new Date(t.date+'T12:00:00').toLocaleDateString('pt-BR')}</div><div class="value sm" style="margin-top:8px">${money(t.value)}</div>`;
+ paymentAccountSummary.innerHTML=`<div style="font-weight:900">${t.title}</div><div class="item-meta">${t.category} • Vencimento ${new Date(t.date+'T12:00:00').toLocaleDateString('pt-BR')}</div><div class="value sm" style="margin-top:8px">${money(t.value)}</div>`;
  updatePaymentReceiptPreview();
  paymentOverlay.classList.add('show');
 }
@@ -1182,7 +1182,7 @@ function updateReceiptPreview(){
  }
 }
 function removeCurrentReceipt(){
- if(confirm('Remover o comprovante deste lanÃ§amento?')){
+ if(confirm('Remover o comprovante deste lançamento?')){
    currentReceipt='';
    updateReceiptPreview();
  }
@@ -1223,12 +1223,12 @@ function openDetails(id){
  <div class="detail-line"><span>Status</span><strong>${t.paid?(t.type==='income'?'Recebido':'Pago'):'Pendente'}</strong></div>
  ${t.paymentDate?`<div class="detail-line"><span>Data do pagamento</span><strong>${new Date(t.paymentDate+'T12:00:00').toLocaleDateString('pt-BR')}</strong></div>`:''}
  ${t.paymentBank?`<div class="detail-line"><span>Banco</span><strong>${t.paymentBank}</strong></div>`:''}
- ${t.person?`<div class="detail-line"><span>ResponsÃ¡vel</span><strong>${t.person}</strong></div>`:''}
- ${t.note?`<div class="detail-line"><span>ObservaÃ§Ã£o</span><strong>${t.note}</strong></div>`:''}`;
+ ${t.person?`<div class="detail-line"><span>Responsável</span><strong>${t.person}</strong></div>`:''}
+ ${t.note?`<div class="detail-line"><span>Observação</span><strong>${t.note}</strong></div>`:''}`;
  detailActions.innerHTML=`
  ${receipt?`<button class="primary" onclick="closeDetails();openReceipt(${t.id})">Abrir comprovante</button>`:''}
  ${t.type==='expense'&&t.paid?`<button class="secondary" onclick="undoPayment(${t.id})">Desfazer pagamento</button>`:''}
- <button class="secondary" onclick="closeDetails();editTransaction(${t.id})">Editar lanÃ§amento</button>`;
+ <button class="secondary" onclick="closeDetails();editTransaction(${t.id})">Editar lançamento</button>`;
  detailOverlay.classList.add('show');
 }
 function closeDetails(){detailOverlay.classList.remove('show')}
@@ -1243,15 +1243,15 @@ function undoPayment(id){
 function renderCloseMonth(){
  const m=currentMonth(),closed=isMonthClosed(m);
  closeMonthCard.innerHTML=`<div style="font-weight:900;font-size:16px">${new Date(m+'-01T12:00:00').toLocaleDateString('pt-BR',{month:'long',year:'numeric'})}</div>
- <p class="note">${closed?'Este mÃªs estÃ¡ protegido contra alteraÃ§Ãµes.':'Ao fechar o mÃªs, lanÃ§amentos, pagamentos e exclusÃµes ficam bloqueados atÃ© vocÃª reabri-lo.'}</p>
- <button class="${closed?'secondary':'primary'}" onclick="toggleCloseMonth()">${closed?'Reabrir mÃªs':'Fechar mÃªs'}</button>`;
+ <p class="note">${closed?'Este mês está protegido contra alterações.':'Ao fechar o mês, lançamentos, pagamentos e exclusões ficam bloqueados até você reabri-lo.'}</p>
+ <button class="${closed?'secondary':'primary'}" onclick="toggleCloseMonth()">${closed?'Reabrir mês':'Fechar mês'}</button>`;
 }
 function toggleCloseMonth(){
  const m=currentMonth();
  if(isMonthClosed(m)){
-   if(confirm('Reabrir este mÃªs para alteraÃ§Ãµes?'))delete data.closedMonths[m];
+   if(confirm('Reabrir este mês para alterações?'))delete data.closedMonths[m];
  }else{
-   if(!confirm('Fechar este mÃªs e protegÃª-lo contra alteraÃ§Ãµes?'))return;
+   if(!confirm('Fechar este mês e protegê-lo contra alterações?'))return;
    data.closedMonths[m]=new Date().toISOString();
  }
  persist();renderAll();
@@ -1270,7 +1270,7 @@ function restoreBackup(event){
      const payload=JSON.parse(e.target.result);
      const restored=payload.data||payload;
      if(!restored.transactions||!restored.reserve)throw new Error();
-     if(confirm('Restaurar este backup substituirÃ¡ os dados atuais. Continuar?')){
+     if(confirm('Restaurar este backup substituirá os dados atuais. Continuar?')){
        data=restored;if(!data.closedMonths)data.closedMonths={};
 if(!data.customCategories)data.customCategories=[];
 if(!data.settings)data.settings={people:[],favoriteCategories:[],savingsGoal:0,theme:'light'};
@@ -1278,7 +1278,7 @@ if(!data.settings)data.settings={people:[],favoriteCategories:[],savingsGoal:0,t
        if(payload.selectedMonth)localStorage.setItem(MONTH_KEY,payload.selectedMonth);
        location.reload();
      }
-   }catch(err){alert('Arquivo de backup invÃ¡lido.')}
+   }catch(err){alert('Arquivo de backup inválido.')}
  };
  reader.readAsText(file);event.target.value='';
 }
@@ -1290,16 +1290,16 @@ function storageBytes(){
 function checkStorage(){
  const bytes=storageBytes(),mb=bytes/1024/1024;
  if(typeof storageWarning!=='undefined'){
-   if(mb>3.5){storageWarning.style.display='block';storageWarning.textContent=`AtenÃ§Ã£o: o aplicativo estÃ¡ usando ${mb.toFixed(1)} MB. FaÃ§a um backup e considere remover comprovantes antigos.`}
+   if(mb>3.5){storageWarning.style.display='block';storageWarning.textContent=`Atenção: o aplicativo está usando ${mb.toFixed(1)} MB. Faça um backup e considere remover comprovantes antigos.`}
    else storageWarning.style.display='none';
  }
 }
 function configurePin(){
- const p=prompt('Crie uma senha numÃ©rica de 4 a 6 dÃ­gitos:');
+ const p=prompt('Crie uma senha numérica de 4 a 6 dígitos:');
  if(!p)return;
- if(!/^\d{4,6}$/.test(p)){alert('Use de 4 a 6 nÃºmeros.');return}
+ if(!/^\d{4,6}$/.test(p)){alert('Use de 4 a 6 números.');return}
  const c=prompt('Confirme a senha:');
- if(c!==p){alert('As senhas nÃ£o conferem.');return}
+ if(c!==p){alert('As senhas não conferem.');return}
  localStorage.setItem('nossa_familia_pin',p);alert('Senha configurada.');
 }
 function removePin(){
@@ -1327,7 +1327,7 @@ function saveSettings(){
  const people=(settingsPeople.value||'').split(',').map(x=>x.trim()).filter(Boolean);
  const fav=(settingsCategories.value||'').split(',').map(x=>x.trim()).filter(Boolean);
  data.settings={people,favoriteCategories:fav,savingsGoal:parseMoney(settingsSavingsGoal.value),theme:settingsTheme.value};
- persist();applySettings();alert('ConfiguraÃ§Ãµes salvas.');
+ persist();applySettings();alert('Configurações salvas.');
 }
 function applySettings(){
  const s=data.settings||{};
@@ -1344,7 +1344,7 @@ function applySettings(){
 }
 
 function exportCSV(){
- const rows=[['Tipo','DescriÃ§Ã£o','Categoria','Valor','Data','Status','ResponsÃ¡vel','ObservaÃ§Ã£o'],...data.transactions.map(t=>[t.type,t.title,t.category,t.value.toFixed(2),t.date,t.paid?'Pago':'Pendente',t.person||'',t.note||''])];
+ const rows=[['Tipo','Descrição','Categoria','Valor','Data','Status','Responsável','Observação'],...data.transactions.map(t=>[t.type,t.title,t.category,t.value.toFixed(2),t.date,t.paid?'Pago':'Pendente',t.person||'',t.note||''])];
  const csv=rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\n');
  const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='relatorio-nossa-familia.csv';a.click();URL.revokeObjectURL(url)
 }
@@ -1356,14 +1356,14 @@ init();
 <input type="hidden" id="paymentTxId">
 <div id="paymentAccountSummary" class="card" style="box-shadow:none;background:#f7f3ef"></div>
 <div class="field"><label>Data do pagamento</label><input id="paymentDate" type="date"></div>
-<div class="field"><label>Banco de pagamento (opcional)</label><input id="paymentBank" placeholder="Ex.: Nubank, ItaÃº, Caixa"></div>
+<div class="field"><label>Banco de pagamento (opcional)</label><input id="paymentBank" placeholder="Ex.: Nubank, Itaú, Caixa"></div>
 <div class="field">
 <label>Comprovante (opcional)</label>
 <div class="attachment-box">
   <input id="paymentReceiptInput" type="file" accept="image/*" onchange="handlePaymentReceipt(event)">
   <div class="note">Escolha uma foto da galeria, tire uma nova foto ou selecione um arquivo.</div>
   <div id="paymentReceiptPreview" class="attachment-preview">
-    <img id="paymentReceiptImg" alt="PrÃ©via do comprovante">
+    <img id="paymentReceiptImg" alt="Prévia do comprovante">
     <div class="attachment-actions">
       <button type="button" class="attach-view" onclick="openPaymentReceipt()">Visualizar</button>
       <button type="button" class="attach-remove" onclick="removePaymentReceipt()">Remover</button>
@@ -1385,7 +1385,7 @@ init();
 
 <div id="receiptViewerOverlay" class="overlay" onclick="closeReceiptViewerFromBackdrop(event)">
 <div class="sheet receipt-viewer-sheet">
-<button class="receipt-close-fixed" onclick="closeReceiptViewer()">Ã</button>
+<button class="receipt-close-fixed" onclick="closeReceiptViewer()">×</button>
 <h2>Comprovante</h2>
 <div class="attachment-box">
 <img id="receiptViewerImg" alt="Comprovante" style="width:100%;max-height:68vh;object-fit:contain;border-radius:14px;background:#f2ece6">
@@ -1397,14 +1397,14 @@ init();
 </div></div>
 
 <div id="receiptFullscreen" class="receipt-fullscreen">
-<button class="receipt-close-fixed" onclick="closeReceiptFullScreen()">Ã</button>
+<button class="receipt-close-fixed" onclick="closeReceiptFullScreen()">×</button>
 <img id="receiptFullscreenImg" alt="Comprovante em tela cheia">
 </div>
 
 <div id="lockScreen" class="lock-screen">
 <div class="lock-card">
-<div style="font-size:42px">ð</div>
-<h2>Nossa FamÃ­lia</h2>
+<div style="font-size:42px">🔐</div>
+<h2>Nossa Família</h2>
 <p class="note">Digite a senha para acessar o aplicativo.</p>
 <input id="unlockPin" type="password" inputmode="numeric" maxlength="6" placeholder="Senha">
 <button class="primary" onclick="unlockApp()">Entrar</button>
